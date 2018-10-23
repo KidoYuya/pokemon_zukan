@@ -1,0 +1,38 @@
+<div class="pokemons-detail">
+    <div class="search-pokemons">
+    </div>
+    <div class="pokemons-list">
+        <table border="1">
+            <tr>
+                <th>番号</th>
+                <th>名前</th>
+                <th>タイプ1</th>
+                <th>タイプ2</th>
+                <th>分類</th>
+                <th>特性</th>
+                <th>高さ</th>
+                <th>重さ</th>
+                <th>性別</th>
+                <th>詳細</th>
+            </tr>
+            <%@pokemons.each  do |pokemon|%>
+            <tr>
+                <td><%=pokemon.id%></td>
+                <td><%=pokemon.name%></td>
+                <td><%=pokemon.type1_id%></td>
+                <td><%=pokemon.type2_id%></td>
+                <td><%=pokemon.classification%></td>
+                <td><%=pokemon.character%></td>
+                <td><%=pokemon.height%></td>
+                <td><%=pokemon.height%></td>
+                <td><%=pokemon.weight%></td>
+                <td><%=pokemon.sex_id%></td>
+                <td><%=pokemon.detail%></td>
+                <td><%=link_to "編集", edit_pokemon_path(pokemon.id, class: 'btn btn-default', style: 'border: 1px solid black;') %></td>
+            </tr>
+            <%end%>
+        </table>
+    </div>
+    <%= link_to "ポケモンを追加", new_pokemon_path %>
+    <%= link_to "戻る", '/'%>
+</div>

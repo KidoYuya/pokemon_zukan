@@ -1,0 +1,24 @@
+<div class='pokemon_form'>
+<% nested_form_for(@pokemon) do |f|%>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :type1_id %>
+<% f.fields_for :type1_id do |type1| %>
+<% end %>
+<%= f.hidden_field :type2_id %>
+<% f.fields_for :type2_id do |type2| %>
+<% end %>
+<%= f.label :classification %>
+<%= f.text_field :classification %>
+<%= f.label :character %>
+<%= f.text_field :character %>
+<%= f.label :height %>
+<%= f.number_field :height %>
+<%= f.label :weight %>
+<%= f.number_field :weight %>
+<% f.fields_for :sex_id do || %>
+<%= end%>
+<%= f.label :detail %>
+<%= f.text_area :detail %>
+<%end%>
+</div>
