@@ -2,11 +2,8 @@
 <% nested_form_for(@pokemon) do |f|%>
 <%= f.label :name %>
 <%= f.text_field :name %>
-<%= f.label :type1_id %>
-<% f.fields_for :type1_id do |type1| %>
-<% end %>
-<%= f.hidden_field :type2_id %>
-<% f.fields_for :type2_id do |type2| %>
+<%= f.label :type_id %>
+<% f.fields_for :type_id do |type1| %>
 <% end %>
 <%= f.label :classification %>
 <%= f.text_field :classification %>
