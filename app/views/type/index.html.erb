@@ -1,2 +1,13 @@
-<h1>Type#index</h1>
-<p>Find me in app/views/type/index.html.erb</p>
+<dif class='type-list'>
+    <table>
+     <tr>
+      <th>タイプ</th>
+     </tr>
+     <%@type.each do |type|%>
+     <tr>
+      <td><%=type.type_name%></td>
+      <td></td>
+     </tr>
+     <%end%>
+    </table>
+</dif>

@@ -1,5 +1,6 @@
 class TypeController < ApplicationController
   def index
+    @type = Type.all
   end
 
   def show
